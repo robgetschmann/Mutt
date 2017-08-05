@@ -1,0 +1,55 @@
+set abort_nosubject=ask-no
+set alias_file="$HOME/.mail_aliases"
+set askbcc=no
+set askcc=no
+set attach_split=no
+set autoedit
+set certificate_file="$HOME/.mutt/mutt-certificates"
+set copy=yes
+set delete=yes
+set edit_headers
+set editor="vim \"+set spell\" \"+set tw=0\" \"+set wm=0\""
+set fast_reply
+set fcc_attach=yes
+set forward_format="FW: %s"
+set hdr_format="%4C %Z %{%m/%d} %-15.15F (%4c) %s"
+set header_cache="$HOME/.mutt/mutt-headercache"
+set help
+set hidden_host=yes
+set imap_idle=yes
+set implicit_autoview
+set include
+set mail_check=10
+set message_cachedir="$HOME/.mutt/mutt-messagecache"
+set mime_forward
+set move=no
+set narrow_tree
+set noconfirmappend
+set nomark_old
+set noprompt_after
+set nosave_empty
+set nouse_domain
+set pager_index_lines=10
+set print_command="/bin/false"
+set read_inc=25
+set reply_to
+set reverse_name
+set send_charset="utf-8"
+set sendmail_wait=-1
+set shell="tcsh"
+set smtp_authenticators="login"
+set sort_aux="reverse-last-date-received"
+set sort_browser="alpha"
+set sort="threads"
+set strict_threads
+set text_flowed
+set tilde
+set timeout=15
+set write_inc=25
+
+unset arrow_cursor
+unset metoo
+unset reply_self
+unset sig_on_top
+
+mailboxes

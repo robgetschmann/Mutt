@@ -1,0 +1,49 @@
+
+auto_view application/x-gunzip
+auto_view application/x-gzip
+auto_view text/html
+
+bind generic - first-entry
+bind generic = last-entry
+
+bind generic { top-page
+bind generic } bottom-page
+
+bind pager G bottom
+
+#
+# Header Ordering.
+#
+
+unhdr_order *
+hdr_order from to cc bcc date subject
+
+#
+# Header Displays.
+#
+
+ignore *
+unignore from: subject to cc mail-followup-to date x-mailer x-url
+
+mailboxes
+
+#
+# Macros.
+#
+
+#macro index d "<delete-message><sync-mailbox>" "Move Message To Trash Folder"
+macro index M "T.*\n;WN" "Mark Messages Read"
+macro index S "<save-message>=Junk<return><sync-mailbox>" "Move Message to Junk Folder"
+macro index \cb "|urlview<return>" "View URLs Within the Message"
+
+#macro pager d "<delete-message><sync-mailbox>" "Move Message To Trash Folder"
+macro pager S "<save-message>=Junk<return><sync-mailbox>" "Move Message to Junk Folder"
+macro pager \cb "|urlview<return>" "View URLs Within the Message"
+
+send-hook . unset pgp_autoencrypt
+
+#send-hook '~t ^rob@getschmann\.com$' set pgp_autoencrypt
+#send-hook '~t ^rob@getschmann\.net$' set pgp_autoencrypt
+#send-hook '~t ^rob@getschmann\.org$' set pgp_autoencrypt
+
+#set my_hdr="X-PGP-Key: http://pgp.mit.edu/pks/lookup?op=get&search=0x21C67B9E4695074A"

@@ -1,0 +1,24 @@
+#
+# .muttrc
+#
+
+set folder="imaps://<IP>:<PORT>/"
+set from="<EMAIL-ADDRESS>"
+set imap_user="<USER>"
+set pgp_sign_as="0x<KEY-IDENTIFIER>>"
+set query_command="<QUERY-COMMAND>"
+set realname="<YOUR-NAME>"
+set signature="$HOME/.signature"
+set smtp_authenticators="login"
+set smtp_url="smtp://<USER>@<IP>:<PORT>/"
+
+set mbox="+Received"
+set postponed="+Drafts"
+set record="+Sent"
+set spoolfile="+INBOX"
+set trash="=Trash"
+
+source "$HOME/.mutt/mutt-colors"
+source "$HOME/.mutt/mutt-customization"
+source "$HOME/.mutt/mutt-settings"
+source "$HOME/.mutt/mutt-settings-crypto"
