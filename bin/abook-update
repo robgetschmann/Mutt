@@ -1,0 +1,12 @@
+#! /usr/bin/env sh
+
+umask 077
+
+domain=domain
+server="ldap.company.com"
+user=me
+
+ldapsearch -LLL -H ldaps://${server}:3269 -D "${domain}\\${user}" -W "(|(givenName=*)(sn=*))" \
+    | abook --convert --informat ldif --infile - --outformat abook --outfile -
+
+exit 0
