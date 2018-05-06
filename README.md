@@ -54,3 +54,12 @@ All of the top level _muttrc_ files that I have include generic Mutt
   emails.  These are integrated with [_GnuPG_](https://gnupg.org/).  These
   are split out from the general _mutt-settings_ file simply because there
   are quite a few configurables here.
+
+* **_bin/abook-update_**
+
+  This script will download the addresses from a configured LDAP server and
+  output the entries in [_abook](http://abook.sourceforge.net/) format.
+  The mutt query command can then directly reference abook for address
+  look-ups.  This is a static operation.  The mutt query command could be
+  modified to make this dynamic but it was rather slow for the look-up so I
+  decided to go with a static method for address book generation.
