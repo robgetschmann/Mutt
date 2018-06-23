@@ -16,5 +16,3 @@ set pgp_timeout=28800
 set pgp_verify_command="gpg --no-verbose --batch --output - --verify %s %f"
 set pgp_verify_key_command="gpg --no-verbose --batch --fingerprint --check-sigs %r"
 set pgp_verify_sig=yes
-
-unset ssl_verify_host

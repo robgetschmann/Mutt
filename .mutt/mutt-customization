@@ -1,15 +1,27 @@
-
 auto_view application/x-gunzip
 auto_view application/x-gzip
+auto_view text/calendar application/ics
 auto_view text/html
 
-bind generic - first-entry
-bind generic = last-entry
+bind generic - "first-entry"
+bind generic = "last-entry"
 
-bind generic { top-page
-bind generic } bottom-page
+bind generic { "top-page"
+bind generic } "bottom-page"
 
-bind pager G bottom
+bind attach h "display-toggle-weed"
+
+bind compose h "display-toggle-weed"
+
+bind index h "display-toggle-weed"
+bind index gg "first-entry"
+bind index G "last-entry"
+bind index <space> "collapse-thread"
+bind index <tab> "sync-mailbox"
+
+bind pager gg "top"
+bind pager G "bottom"
+bind pager h "display-toggle-weed"
 
 #
 # Header Ordering.
@@ -23,7 +35,10 @@ hdr_order from to cc bcc date subject
 #
 
 ignore *
-unignore from: subject to cc mail-followup-to date x-mailer x-url
+unignore from to cc bcc date subject
+unignore x-mailer
+unignore x-spam-status
+unignore x-spam-report
 
 mailboxes
 

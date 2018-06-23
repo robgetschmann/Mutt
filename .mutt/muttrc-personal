@@ -8,7 +8,7 @@ set imap_user="<USER>"
 set pgp_sign_as="0x<KEY-IDENTIFIER>>"
 set query_command="<QUERY-COMMAND>"
 set realname="<YOUR-NAME>"
-set signature="$HOME/.signature"
+set signature="$HOME/.mutt/mutt-signature"
 set smtp_authenticators="login"
 set smtp_url="smtp://<USER>@<IP>:<PORT>/"
 
@@ -17,6 +17,8 @@ set postponed="+Drafts"
 set record="+Sent"
 set spoolfile="+INBOX"
 set trash="=Trash"
+
+source "gpg -d -q $HOME/.mutt/mutt-<ACCOUNT>-password.gpg |"
 
 source "$HOME/.mutt/mutt-colors"
 source "$HOME/.mutt/mutt-customization"
