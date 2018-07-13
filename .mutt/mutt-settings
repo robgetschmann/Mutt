@@ -31,6 +31,7 @@ set nouse_domain
 set pager_index_lines=10
 set print_command="/bin/false"
 set read_inc=25
+set reflow_wrap=0
 set reply_to
 set reverse_name
 set send_charset="utf-8"

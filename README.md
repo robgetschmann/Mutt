@@ -10,7 +10,7 @@ I still love using command line based tools.  I especially like using
 
 ## Customization
 
-I have a top level _muttrc_ file usually named _muttrc-personal_.  This
+I have a top level _.mutt/muttrc_ file usually named _muttrc-personal_.  This
   contains the configuration for my home e-mail setup.  I typically also
   create a second _muttrc-work_ file which I use for work related email.
 

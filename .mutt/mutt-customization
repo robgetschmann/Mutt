@@ -5,7 +5,6 @@ auto_view text/html
 
 bind generic - "first-entry"
 bind generic = "last-entry"
-
 bind generic { "top-page"
 bind generic } "bottom-page"
 
@@ -13,15 +12,17 @@ bind attach h "display-toggle-weed"
 
 bind compose h "display-toggle-weed"
 
-bind index h "display-toggle-weed"
 bind index gg "first-entry"
 bind index G "last-entry"
+bind index h "display-toggle-weed"
+bind index R "group-reply"
 bind index <space> "collapse-thread"
 bind index <tab> "sync-mailbox"
 
 bind pager gg "top"
 bind pager G "bottom"
 bind pager h "display-toggle-weed"
+bind pager R "group-reply"
 
 #
 # Header Ordering.
@@ -56,9 +57,3 @@ macro pager S "<save-message>=Junk<return><sync-mailbox>" "Move Message to Junk 
 macro pager \cb "|urlview<return>" "View URLs Within the Message"
 
 send-hook . unset pgp_autoencrypt
-
-#send-hook '~t ^rob@getschmann\.com$' set pgp_autoencrypt
-#send-hook '~t ^rob@getschmann\.net$' set pgp_autoencrypt
-#send-hook '~t ^rob@getschmann\.org$' set pgp_autoencrypt
-
-#set my_hdr="X-PGP-Key: http://pgp.mit.edu/pks/lookup?op=get&search=0x21C67B9E4695074A"

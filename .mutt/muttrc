@@ -1,7 +1,3 @@
-#
-# .muttrc
-#
-
 set folder="imaps://<IP>:<PORT>/"
 set from="<EMAIL-ADDRESS>"
 set imap_user="<USER>"
